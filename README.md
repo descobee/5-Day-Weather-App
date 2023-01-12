@@ -1,4 +1,4 @@
-# cwg
+# Fifthlab 5-Day Weather Application
 
 A new Flutter project.
 
