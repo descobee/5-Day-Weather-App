@@ -56,7 +56,7 @@ flutter:
   # Application assets folder
   assets:
     - assets/images/
-    - assets/svgs/
+    - assets/icons/
    
 
   # fonts:

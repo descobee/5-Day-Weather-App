@@ -15,21 +15,6 @@ class Helpers {
     }
   }
 
-  static Widget getSvg(
-    String path, {
-    Color? color,
-    double? height,
-    double? width,
-    BoxFit? fit,
-  }) {
-    return SvgPicture.asset(
-      path,
-      color: color,
-      height: height,
-      width: width,
-      fit: fit ?? BoxFit.contain,
-    );
-  }
 
   static String parseError(dynamic exception) {
     try {

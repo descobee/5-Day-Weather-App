@@ -5,7 +5,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:fifthlab_assessment/ui/ui_helpers/helpers.dart';
 import 'package:http/http.dart' as http;
-import 'package:validators/sanitizers.dart';
 
 class ApiClient {
   late http.Client client;
@@ -17,13 +16,6 @@ class ApiClient {
   }) : client = client ?? http.Client();
 
   Future<dynamic> get(String url, {Map<String, dynamic>? queries}) async {
-    if (queries != null) {
-      url += queries.keys.fold(
-        '?',
-        (previousValue, key) => '$previousValue$key=${queries[key]}&',
-      );
-      url = trim(url, '&');
-    }
 
     var responseJson;
     try {
@@ -56,17 +48,13 @@ class ApiClient {
 
   dynamic _getResponse(http.Response response) {
     int code = response.statusCode;
-    if (response.body.startsWith('{"status":"error"')) {
-      // handle v1 fake 200 errors
-      if (response.statusCode != 401) code = 400;
-    }
-
+  
     try {
       switch (code) {
+        // 400 cases
         case 400:
           throw BadRequestException(processError(response));
         case 401:
-          // if (locator.get<Application>().user.apiToken == null) return;
           throw InvalidTokenException(processError(response));
         case 402:
           throw GeneralErrorException(processError(response));
@@ -128,7 +116,7 @@ class ApiClient {
         default:
           if (!isResponseOk(response.statusCode)) {
             throw FetchDataException(
-              '\n StatusCode : ${response.statusCode}.'
+              '\n StatusCode: ${response.statusCode}.'
               '\n Response: ${response.body}',
             );
           }
@@ -150,10 +138,9 @@ class ApiClient {
 }
 
 class AppException implements Exception {
-  AppException([this.message, this._prefix]);
+  AppException([this.message, this.prefix]);
   final dynamic message;
-  // ignore: unused_field, use_late_for_private_fields_and_variables
-  final _prefix;
+  final prefix;
   @override
   String toString() {
     return "$message";
