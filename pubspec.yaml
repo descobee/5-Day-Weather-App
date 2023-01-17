@@ -33,6 +33,9 @@ dependencies:
   # Intl package used in date and time formatting
   intl: ^0.18.0
 
+  # Location package used in accessing a user's location
+  location: ^4.2.0
+
   # For app validation
   validators: ^3.0.0
 

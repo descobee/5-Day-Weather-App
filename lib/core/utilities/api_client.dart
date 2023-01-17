@@ -8,13 +8,13 @@ import 'package:http/http.dart' as http;
 
 class ApiClient {
   late http.Client client;
-  bool showError = false;
 
   ApiClient({
     http.Client? client,
-    this.showError = true,
   }) : client = client ?? http.Client();
 
+
+/// HTTP Get Request method
   Future<dynamic> get(String url, {Map<String, dynamic>? queries}) async {
 
     var responseJson;
