@@ -43,6 +43,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  # Build runner for code generation
+  build_runner: ^2.1.7
+
   # The default "flutter_lints" package 
   flutter_lints: ^2.0.0
 
