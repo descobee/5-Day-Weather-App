@@ -33,12 +33,18 @@ dependencies:
   # Intl package used in date and time formatting
   intl: ^0.18.0
 
+  # Location package used in accessing a user's location
+  location: ^4.2.0
+
   # For app validation
   validators: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Build runner for code generation
+  build_runner: ^2.1.7
 
   # The default "flutter_lints" package 
   flutter_lints: ^2.0.0
