@@ -19,3 +19,5 @@ A simple Flutter weather project that implements the required expectations in th
 - Intl package for formatting Date Time [here](https://pub.dev/packages/intl).
 - Get It package for Dependency Injection [here](https://pub.dev/packages/get_it).
 - Location package for accessing the user's location.
+
+Attached is a snippet of the application working.
