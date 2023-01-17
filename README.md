@@ -1,3 +1,4 @@
+
 # Fifthlab 5-Day Weather Application
 
 A simple Flutter weather project that implements the required expectations in this [document](https://docs.google.com/document/d/1M-e7DcdbtQwYlvNw4DkzDrVnuWs4yDjXcelOLBKt3ug/edit).
@@ -21,3 +22,5 @@ A simple Flutter weather project that implements the required expectations in th
 - Location package for accessing the user's location.
 
 Attached is a snippet of the application working.
+
+https://user-images.githubusercontent.com/61969550/212969882-c8d21be7-1934-46a1-b2c3-e001139a7b67.mp4
