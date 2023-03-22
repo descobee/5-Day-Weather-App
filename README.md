@@ -1,7 +1,7 @@
 
-# Fifthlab 5-Day Weather Application
+# 5-Day Weather Application
 
-A simple Flutter weather project that implements the required expectations in this [document](https://docs.google.com/document/d/1M-e7DcdbtQwYlvNw4DkzDrVnuWs4yDjXcelOLBKt3ug/edit).
+A simple Flutter weather project that implements the features below
 
 
 ## Application Features
